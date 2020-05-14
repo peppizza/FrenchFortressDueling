@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "src"
+		},
+		{
+			"path": "src\\addons"
+		}
+	],
+	"settings": {
+		"sourcepawnLanguageServer.sourcemod_home": "E:\\hlserver\\steamapps\\common\\Team Fortress 2 Dedicated Server\\tf\\addons\\sourcemod\\scripting\\include"
+	}
+}
