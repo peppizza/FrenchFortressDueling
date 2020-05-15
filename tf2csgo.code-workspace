@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"sourcepawnLanguageServer.sourcemod_home": "E:\\hlserver\\steamapps\\common\\Team Fortress 2 Dedicated Server\\tf\\addons\\sourcemod\\scripting\\include"
+		"sourcepawnLanguageServer.sourcemod_home": "sourcemod\\scripting\\include"
 	}
 }
