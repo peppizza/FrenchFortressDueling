@@ -1,4 +1,5 @@
 #include <sourcemod>
+#include <sdktools>
 
 public Plugin myinfo = 
 {
@@ -11,5 +12,33 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-    PrintToServer("Hello world!");
+    HookEvent("player_death", Event_PlayerDeath)
+    PrintToServer("Plugin TF2CS:GO loaded")
+}
+
+public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast)
+{
+    char critType[5]
+    int victimId = event.GetInt("userid");
+    int attackerId = event.GetInt("attacker");
+    int crit = event.GetInt("crit_type");
+
+    char Victimname[64];
+    char Killername[64];
+    int victim = GetClientOfUserId(victimId);
+    int attacker = GetClientOfUserId(attackerId);
+    GetClientName(victim, Victimname, sizeof(Victimname));
+    GetClientName(attacker, Killername, sizeof(Killername));
+
+    switch (crit)
+    {
+        case 1:
+            critType = "Mini";
+        case 2:
+            critType = "Full";
+        default:
+            critType = "No";
+    }
+
+    PrintToChatAll("\"%s\" was killed by \"%s\" with %s crit(s)", Victimname, Killername, critType);
 }
