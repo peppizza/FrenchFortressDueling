@@ -8,7 +8,7 @@ then
 	mv addons/sourcemod .
 	rm -r cfg
 	rm -r addons
-	rm sourcemod-1.10.0-get6488-linux.tar.gz
+	rm sourcemod-1.10.0-git6488-linux.tar.gz
 fi
 
 cp src/addons/sourcemod/plugins/tf2csgo.sp sourcemod/scripting/
