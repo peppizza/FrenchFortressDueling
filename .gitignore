@@ -1,2 +1,4 @@
 tfcsgo.code-workspace
 sourcemod/
+build/
+sourcemod-1.10.0-git6488-linux.tar.gz
