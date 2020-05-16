@@ -24,4 +24,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build the project
-      run: scripts/./build.sh
+      run: |
+        git clone https://github.com/peppizza/TF2CSGO.git
+        cd tf2csgo
+        scripts/./build.sh
