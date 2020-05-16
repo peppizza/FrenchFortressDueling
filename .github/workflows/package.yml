@@ -24,4 +24,13 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build the project
-      run: scripts/./build.sh
+      run: |
+        cd scripts
+        ./build.sh
+        
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build
+        
