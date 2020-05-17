@@ -1,5 +1,5 @@
 #include <sourcemod>
-#include <sdktools>
+#include <tf2_stocks>
 
 public Plugin myinfo = 
 {
@@ -46,35 +46,12 @@ public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast
 
 public void Event_PlayerChangeClass(Event event, const char[] name, bool dontBroadcast)
 {
-    char Person[64];
-    int personId = event.GetInt("userid");
-    int person = GetClientOfUserId(personId);
-    GetClientName(person, Person, sizeof(Person));
-
-    char className[9];
-    int class = event.GetInt("class");
-
-    switch (class)
+    char playername[64];
+    int playerid = event.GetInt("userid")
+    int player = GetClientOfUserId(playerid)
+    GetClientName(player, playername, sizeof(playername))
+    if (TF2_GetPlayerClass(player) == TfClass_Pyro)
     {
-        case 1:
-            className = "Scout";
-        case 2:
-            className = "Sniper";
-        case 3:
-            className = "Soldier";
-        case 4:
-            className = "Demoman";
-        case 5:
-            className = "Medic";
-        case 6:
-            className = "Heavy";
-        case 7:
-            className = "Pyro";
-        case 8:
-            className = "Spy";
-        case 9:
-            className = "Engineer";
+        PrintToChatAll("\"%s\" has changed class to sniper", playername)
     }
-
-    PrintToChatAll("\"%s\" has changed class to \"%s\"", Person, className);
 }
