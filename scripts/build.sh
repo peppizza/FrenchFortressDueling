@@ -11,7 +11,8 @@ then
 	rm sourcemod-1.10.0-git6488-linux.tar.gz
 fi
 
-cp src/addons/sourcemod/plugins/tf2csgo.sp sourcemod/scripting/
+cp src/addons/sourcemod/scripting/tf2csgo.sp sourcemod/scripting/
+cp src/addons/sourcemod/scripting/include/player.inc sourcemod/scripting/include
 sourcemod/scripting/./compile.sh tf2csgo.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/tf2csgo.smx build/sourcemod/plugins
