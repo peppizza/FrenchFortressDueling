@@ -12,7 +12,7 @@ then
 fi
 
 cp src/addons/sourcemod/scripting/tf2csgo.sp sourcemod/scripting/
-cp src/addons/sourcemod/scripting/include/player.inc sourcemod/scripting/include
+cp src/addons/sourcemod/scripting/player.sp sourcemod/scripting/
 sourcemod/scripting/./compile.sh tf2csgo.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/tf2csgo.smx build/sourcemod/plugins
