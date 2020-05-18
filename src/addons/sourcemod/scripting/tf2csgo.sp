@@ -28,8 +28,7 @@ public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast
     int playerClient = GetClientOfUserId(playerId);
 
     Player player = Player(playerClient);
-    TFClassType playerClass = player.class;
-    switch (playerClass)
+    switch (player.class)
     {
         case TFClass_Scout:
             PrintToChatAll("scout");
