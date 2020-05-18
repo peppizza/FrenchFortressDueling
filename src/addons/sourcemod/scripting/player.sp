@@ -1,27 +1,27 @@
-methodmap Player __nullable__
+methodmap Player
 {
     public Player(int client)
     {
         return view_as<Player>(client);
     }
-
-    property int clientId
+    
+    property int client
     {
         public get()
         {
             return view_as<int>(this);
         }
     }
-    
-    property TFClassType Class
+
+    property TFClassType class
     {
         public get()
         {
-            TF2_GetPlayerClass(this.clientId);
+            return TF2_GetPlayerClass(this.client);
         }
         public set(TFClassType value)
         {
-            TF2_SetPlayerClass(this.clientId, value);
+            TF2_SetPlayerClass(this.client, value);
         }
     }
 }

@@ -23,30 +23,35 @@ public void OnPluginStart()
 
 public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast)
 {
-    char critType[5];
-    int victimId = event.GetInt("userid");
-    int attackerId = event.GetInt("attacker");
-    int crit = event.GetInt("crit_type");
+    int playerId = event.GetInt("userid");
 
-    char Victimname[64];
-    char Killername[64];
-    int victim = GetClientOfUserId(victimId);
-    int attacker = GetClientOfUserId(attackerId);
-    GetClientName(victim, Victimname, sizeof(Victimname));
-    GetClientName(attacker, Killername, sizeof(Killername));
+    int playerClient = GetClientOfUserId(playerId);
 
-    switch (crit)
+    Player player = Player(playerClient);
+    TFClassType playerClass = player.class;
+    switch (playerClass)
     {
-        case 1:
-            critType = "Mini";
-        case 2:
-            critType = "Full";
+        case TFClass_Scout:
+            PrintToChatAll("scout");
+        case TFClass_Soldier:
+            PrintToChatAll("soldier");
+        case TFClass_Pyro:
+            PrintToChatAll("pyro");
+        case TFClass_DemoMan:
+            PrintToChatAll("demoman");
+        case TFClass_Heavy:
+            PrintToChatAll("heavy");
+        case TFClass_Engineer:
+            PrintToChatAll("engineer");
+        case TFClass_Medic:
+            PrintToChatAll("medic");
+        case TFClass_Sniper:
+            PrintToChatAll("sniper");
+        case TFClass_Spy:
+            PrintToChatAll("spy");
+        case TFClass_Unknown:
+            PrintToChatAll("Unkown: could not get class");
         default:
-            critType = "No";
+            PrintToChatAll("default: could not get class");
     }
-
-    PrintToChatAll("\"%s\" was killed by \"%s\" with %s crit(s)", Victimname, Killername, critType);
-    PrintToChat(victim, "you were killed by \"%s\"", Killername);
-    Player player = new Player(victim);
-    if (player.class)
 }
