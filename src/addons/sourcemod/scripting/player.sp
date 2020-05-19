@@ -37,6 +37,10 @@ methodmap Player
             {
                 TF2_RespawnPlayer(this.client);
             }
+            else
+            {
+                SDKHooks_TakeDamage(this.client, this.client, this.client, 600.0);
+            }
         }
     }
 }
