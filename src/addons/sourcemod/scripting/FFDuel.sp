@@ -19,5 +19,11 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
+    char gameFolder[32];
+    GetGameFolderName(gameFolder, sizeof(gameFolder));
+    if (!StrEqual(gamefolder, "tf"))
+    {
+        SetFailState("Plugin can only be run in tf2");
+    }
     InitRespawn();
 }
