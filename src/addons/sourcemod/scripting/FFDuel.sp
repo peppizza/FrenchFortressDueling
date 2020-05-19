@@ -10,7 +10,7 @@
 
 public Plugin myinfo = 
 {
-    name = "FrenchFortressDuel",
+    name = "FFDuel",
     author = "Peppizza",
     description = "A plugin to add a unique dueling system to the french fortress tf2 server",
     version = "0.1",
@@ -21,7 +21,7 @@ public void OnPluginStart()
 {
     char gameFolder[32];
     GetGameFolderName(gameFolder, sizeof(gameFolder));
-    if (!StrEqual(gamefolder, "tf"))
+    if (!StrEqual(gameFolder, "tf"))
     {
         SetFailState("Plugin can only be run in tf2");
     }
