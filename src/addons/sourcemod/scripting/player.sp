@@ -24,4 +24,19 @@ methodmap Player
             TF2_SetPlayerClass(this.client, value);
         }
     }
+
+    property bool alive
+    {
+        public get()
+        {
+            return IsPlayerAlive(this.client);
+        }
+        public set(bool value)
+        {
+            if (value)
+            {
+                TF2_RespawnPlayer(this.client);
+            }
+        }
+    }
 }
