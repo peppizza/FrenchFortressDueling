@@ -12,7 +12,7 @@ then
 fi
 
 cp src/scripting/FFDuel.sp sourcemod/scripting/
-cp src/scripting/player.sp sourcemod/scripting/
+cp src/scripting/include/player.inc sourcemod/scripting/include
 cp src/scripting/respawn.sp sourcemod/scripting/
 cp src/scripting/variables.sp sourcemod/scripting/
 cp src/scripting/dueling.sp sourcemod/scripting/

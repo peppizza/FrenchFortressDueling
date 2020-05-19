@@ -1,14 +1,14 @@
 #pragma semicolon 1
 #pragma newdecls required 
 
+#include "variables.sp"
 #include <sourcemod>
 #include <sdkhooks>
 #include <tf2_stocks>
 #include <tf2>
 #include <sdktools>
-#include "player.sp"
+#include <player>
 #include "respawn.sp"
-#include "variables.sp"
 #include "dueling.sp"
 
 public Plugin myinfo = 
@@ -29,5 +29,4 @@ public void OnPluginStart()
         SetFailState("Plugin can only be run in tf2");
     }
     InitRespawn();
-    InitDueling();
 }

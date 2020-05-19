@@ -29,4 +29,6 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
         Player player = Player(client);
         player.duel = true;
     }
+
+    return Plugin_Continue;
 }
