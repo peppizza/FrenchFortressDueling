@@ -22,12 +22,20 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 
         if (target == -1)
         {
-            PrintToChat(client, "Could not find a player with the name: \"%s\"", sArgs[0]);
+            CPrintToChat(client, "{red}Could not find a player with the name: {default}\"%s\"", sArgs[0]);
+            return Plugin_Handled;
+        }
+
+        if(GetClientTeam(client) == GetClientTeam(target)) {
+            CPrintToChat(client, "{red}You cannot challenge someone on your own team.");
             return Plugin_Handled;
         }
 
         Player player = Player(client);
-        player.duel = true;
+        Player challenged = Player(target);
+        GetClientName(client, challenger, sizeof(challenger));
+        Duel_Menu(client, 0)
+        CPrintToChatAll("{teamcolor}\"%s\" {default}has challenged {teamcolor}\"%s\" {default}to a duel!", challenger);
     }
 
     return Plugin_Continue;

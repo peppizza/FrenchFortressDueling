@@ -8,8 +8,10 @@
 #include <tf2>
 #include <sdktools>
 #include <player>
+#include <morecolors>
 #include "respawn.sp"
 #include "dueling.sp"
+#include "menus.sp"
 
 public Plugin myinfo = 
 {
