@@ -1,1 +1,1 @@
-# TF2CSGO
+# French Fortress TF2 server dueling
