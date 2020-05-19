@@ -11,11 +11,11 @@ then
 	rm sourcemod-1.10.0-git6488-linux.tar.gz
 fi
 
-cp src/addons/sourcemod/scripting/FFDuel.sp sourcemod/scripting/
-cp src/addons/sourcemod/scripting/player.sp sourcemod/scripting/
-cp src/addons/sourcemod/scripting/respawn.sp sourcemod/scripting/
-cp src/addons/sourcemod/scripting/variables.sp sourcemod/scripting/
-cp src/addons/sourcemod/scripting/dueling.sp sourcemod/scripting/
+cp src/scripting/FFDuel.sp sourcemod/scripting/
+cp src/scripting/player.sp sourcemod/scripting/
+cp src/scripting/respawn.sp sourcemod/scripting/
+cp src/scripting/variables.sp sourcemod/scripting/
+cp src/scripting/dueling.sp sourcemod/scripting/
 sourcemod/scripting/./compile.sh FFDuel.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/FFDuel.smx build/sourcemod/plugins
