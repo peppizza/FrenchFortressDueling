@@ -116,6 +116,7 @@ public Action Command_KillPlayer(int client, int args)
         PrintToConsole(client, "Could not find any player with the name \"%s\"", name);
         return Plugin_Handled;
     }
-    SDKHooks_TakeDamage(target, client, client, 600.0);
+    Player player = Player(client);
+    player.alive = false;
     return Plugin_Handled;
 }

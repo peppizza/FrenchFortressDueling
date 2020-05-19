@@ -5,6 +5,7 @@
 #include <sdkhooks>
 #include <tf2_stocks>
 #include <tf2>
+#include <sdktools>
 #include "player.sp"
 #include "respawn.sp"
 

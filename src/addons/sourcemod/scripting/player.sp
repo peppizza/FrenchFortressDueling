@@ -39,7 +39,7 @@ methodmap Player
             }
             else
             {
-                SDKHooks_TakeDamage(this.client, this.client, this.client, 600.0);
+                ForcePlayerSuicide(this.client);
             }
         }
     }
