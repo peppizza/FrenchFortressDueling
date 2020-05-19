@@ -14,6 +14,8 @@ fi
 cp src/addons/sourcemod/scripting/FFDuel.sp sourcemod/scripting/
 cp src/addons/sourcemod/scripting/player.sp sourcemod/scripting/
 cp src/addons/sourcemod/scripting/respawn.sp sourcemod/scripting/
+cp src/addons/sourcemod/scripting/variables.sp sourcemod/scripting/
+cp src/addons/sourcemod/scripting/dueling.sp sourcemod/scripting/
 sourcemod/scripting/./compile.sh FFDuel.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/FFDuel.smx build/sourcemod/plugins

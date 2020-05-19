@@ -1,4 +1,4 @@
-methodmap Player
+methodmap Player 
 {
     public Player(int client)
     {
@@ -41,6 +41,18 @@ methodmap Player
             {
                 ForcePlayerSuicide(this.client);
             }
+        }
+    }
+
+    property bool duel
+    {
+        public get()
+        {
+            return isDueling[this.client];
+        }
+        public set(bool value)
+        {
+            isDueling[this.client] = value;
         }
     }
 }

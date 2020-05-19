@@ -8,6 +8,8 @@
 #include <sdktools>
 #include "player.sp"
 #include "respawn.sp"
+#include "variables.sp"
+#include "dueling.sp"
 
 public Plugin myinfo = 
 {
@@ -27,4 +29,5 @@ public void OnPluginStart()
         SetFailState("Plugin can only be run in tf2");
     }
     InitRespawn();
+    InitDueling();
 }
