@@ -4,4 +4,4 @@
 
 [discord-badge]: https://img.shields.io/discord/684472795639447621.svg?logo=discord&style=flat-square
 [discord-url]: https://discord.gg/nP9JY4C
-[tf2-badge]: https://cache.gametracker.com/server_info/168.62.169.84:27015/banner_560x95.png?random=945122
+[tf2-badge]: https://cache.gametracker.com/server_info/168.62.169.84:27015/b_350_20_692108_381007_ffffff_000000.png
