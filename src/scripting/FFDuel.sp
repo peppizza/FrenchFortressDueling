@@ -1,5 +1,4 @@
 #pragma semicolon 1
-#pragma newdecls required 
 
 #include "variables.sp"
 #include <sourcemod>
@@ -8,7 +7,7 @@
 #include <tf2>
 #include <sdktools>
 #include <player>
-#include <morecolors>
+#include <colors>
 #include "respawn.sp"
 #include "dueling.sp"
 #include "menus.sp"
@@ -31,4 +30,5 @@ public void OnPluginStart()
         SetFailState("Plugin can only be run in tf2");
     }
     InitRespawn();
+    InitDueling();
 }

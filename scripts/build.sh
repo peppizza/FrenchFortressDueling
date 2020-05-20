@@ -16,6 +16,7 @@ cp src/scripting/include/player.inc sourcemod/scripting/include
 cp src/scripting/respawn.sp sourcemod/scripting/
 cp src/scripting/variables.sp sourcemod/scripting/
 cp src/scripting/dueling.sp sourcemod/scripting/
+cp src/scripting/menus.sp sourcemod/scripting/
 sourcemod/scripting/./compile.sh FFDuel.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/FFDuel.smx build/sourcemod/plugins

@@ -9,7 +9,9 @@ public int DuelMenuHandler(Menu menu, MenuAction action, int param1, int param2)
 public Action Duel_Menu(int client, int args)
 {
     Panel panel = new Panel();
-    panel.SetTitle("\"%s\" has challenged you to a duel!, do you accept?", challenger);
+    char title[128];
+    Format(title, sizeof(title), "\"%s\" has challenged you to a duel!, do you accept?", challenger);
+    panel.SetTitle(title);
     panel.DrawItem("Yes");
     panel.DrawItem("No");
 
