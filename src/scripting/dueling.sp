@@ -7,7 +7,7 @@ public Action OnCmdDuel(int client, int args)
 {
     if (!args)
     {
-        ReplyToCommand(client, "Usage: /duel \"<name>\"");
+        ReplyToCommand(client, "Usage: /duel <name>");
         return Plugin_Handled;
     }
     int target = -1;
@@ -41,11 +41,14 @@ public Action OnCmdDuel(int client, int args)
     //    return Plugin_Handled;
     //}
 
-    Player player = Player(client);
-    Player challenged = Player(target);
-    GetClientName(client, challenger, sizeof(challenger));
-    Duel_Menu(target, 0);
-    CPrintToChatAll("{teamcolor}\"%s\" {default}has challenged {teamcolor}\"%s\" {default}to a duel!", challenger);
+    char challengedName[MAX_NAME_LENGTH];
+    char challenger[MAX_NAME_LENGTH];
+    Player playerChallenger = Player(client);
+    Player playerChallenged = Player(target);
+    GetClientName(client, challengedName, sizeof(challengedName));
+    GetClientName(target, challenger, sizeof(challenger));
+    Duel_Menu(target, 0, challenger);
+    CPrintToChatAll("{teamcolor}\"%s\" {default}has challenged {teamcolor}\"%s\" {default}to a duel!", challenger, challengedName);
 
     return Plugin_Continue;
 }
