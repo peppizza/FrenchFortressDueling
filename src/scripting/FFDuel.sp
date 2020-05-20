@@ -1,5 +1,9 @@
 #pragma semicolon 1
 
+#include <morecolors>
+
+#pragma newdecls required
+
 #include "variables.sp"
 #include <sourcemod>
 #include <sdkhooks>
@@ -7,10 +11,11 @@
 #include <tf2>
 #include <sdktools>
 #include <player>
-#include <colors>
 #include "respawn.sp"
 #include "dueling.sp"
 #include "menus.sp"
+
+#pragma newdecls required
 
 public Plugin myinfo = 
 {

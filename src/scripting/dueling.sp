@@ -36,10 +36,10 @@ public Action OnCmdDuel(int client, int args)
         return Plugin_Handled;
     }
 
-    if(GetClientTeam(client) == GetClientTeam(target)) {
-        CPrintToChat(client, "{red}You cannot challenge someone on your own team.");
-        return Plugin_Handled;
-    }
+    //if(GetClientTeam(client) == GetClientTeam(target)) {
+    //    CPrintToChat(client, "{red}You cannot challenge someone on your own team.");
+    //    return Plugin_Handled;
+    //}
 
     Player player = Player(client);
     Player challenged = Player(target);
