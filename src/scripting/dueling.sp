@@ -44,7 +44,7 @@ public Action OnCmdDuel(int client, int args)
     Player player = Player(client);
     Player challenged = Player(target);
     GetClientName(client, challenger, sizeof(challenger));
-    Duel_Menu(client, 0);
+    Duel_Menu(target, 0);
     CPrintToChatAll("{teamcolor}\"%s\" {default}has challenged {teamcolor}\"%s\" {default}to a duel!", challenger);
 
     return Plugin_Continue;
