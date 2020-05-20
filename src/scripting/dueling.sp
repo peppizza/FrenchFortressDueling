@@ -8,13 +8,11 @@ public Action OnCmdDuel(int client, int args)
     if (!args)
     {
         ReplyToCommand(client, "Usage: /duel \"<name>\"");
-        ReplyToCommand(client, "%i", args);
         return Plugin_Handled;
     }
     int target = -1;
     char sPlayerName[MAX_NAME_LENGTH];
     GetCmdArgString(sPlayerName, sizeof(sPlayerName));
-    PrintToChat(client, "%s", sPlayerName);
 
     for (int i = 1; i <= MaxClients; i++)
     {
