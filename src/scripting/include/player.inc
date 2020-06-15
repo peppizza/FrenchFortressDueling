@@ -1,4 +1,4 @@
-methodmap Player 
+methodmap Player __nullable__
 {
     public Player(int client)
     {
@@ -53,6 +53,18 @@ methodmap Player
         public set(bool value)
         {
             isDueling[this.client] = value;
+        }
+    }
+
+    property TFTeam team
+    {
+        public get()
+        {
+            return TF2_GetClientTeam(this.client);
+        }
+        public set(TFTeam team)
+        {
+            TF2_ChangeClientTeam(this.client, team);
         }
     }
 }

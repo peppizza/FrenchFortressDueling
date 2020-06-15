@@ -1,5 +1,9 @@
 #pragma semicolon 1
 
+#undef REQUIRE_PLUGIN
+#define AUTOLOAD_EXTENSIONS
+#define REQUIRE_EXTENSIONS
+
 #include <morecolors>
 
 #pragma newdecls required
