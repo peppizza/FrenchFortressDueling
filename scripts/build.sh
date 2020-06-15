@@ -15,7 +15,7 @@ if [ ! -f sourcemod/scripting/include/morecolors.inc ]; then
 	mv morecolors.inc sourcemod/scripting/include
 fi
 
-rsync -avh --progress src/scripting sourcemod/scripting
+rsync -a --progress src/scripting sourcemod/scripting
 sourcemod/scripting/./compile.sh FFDuel.sp
 mkdir -p build/sourcemod/plugins
 cp sourcemod/scripting/compiled/FFDuel.smx build/sourcemod/plugins
