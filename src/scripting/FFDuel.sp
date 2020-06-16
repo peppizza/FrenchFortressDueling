@@ -1,10 +1,14 @@
 #pragma semicolon 1
 
+#undef REQUIRE_PLUGIN
+#define AUTOLOAD_EXTENSIONS
+#define REQUIRE_EXTENSIONS
+
 #include <morecolors>
 
 #pragma newdecls required
 
-#include "variables.sp"
+#include "header.sp"
 #include <sourcemod>
 #include <sdkhooks>
 #include <tf2_stocks>

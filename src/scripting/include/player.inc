@@ -1,4 +1,4 @@
-methodmap Player 
+methodmap Player __nullable__
 {
     public Player(int client)
     {
@@ -31,20 +31,9 @@ methodmap Player
         {
             return IsPlayerAlive(this.client);
         }
-        public set(bool value)
-        {
-            if (value)
-            {
-                TF2_RespawnPlayer(this.client);
-            }
-            else
-            {
-                ForcePlayerSuicide(this.client);
-            }
-        }
     }
 
-    property bool duel
+    property bool dueling
     {
         public get()
         {
@@ -54,5 +43,15 @@ methodmap Player
         {
             isDueling[this.client] = value;
         }
+    }
+
+    public void KillPlayer()
+    {
+        ForcePlayerSuicide(this.client);
+    }
+
+    public void RespawnPlayer()
+    {
+        TF2_RespawnPlayer(this.client);
     }
 }

@@ -36,19 +36,13 @@ public Action OnCmdDuel(int client, int args)
         return Plugin_Handled;
     }
 
-    //if(GetClientTeam(client) == GetClientTeam(target)) {
-    //    CPrintToChat(client, "{red}You cannot challenge someone on your own team.");
-    //    return Plugin_Handled;
-    //}
-
     char challengedName[MAX_NAME_LENGTH];
-    char challenger[MAX_NAME_LENGTH];
-    Player playerChallenger = Player(client);
-    Player playerChallenged = Player(target);
-    GetClientName(client, challengedName, sizeof(challengedName));
-    GetClientName(target, challenger, sizeof(challenger));
-    Duel_Menu(target, 0, challenger);
-    CPrintToChatAll("{teamcolor}\"%s\" {default}has challenged {teamcolor}\"%s\" {default}to a duel!", challenger, challengedName);
+    char challengerName[MAX_NAME_LENGTH];
+    GetClientName(client, challengerName, sizeof(challengerName));
+    GetClientName(target, challengedName, sizeof(challengedName));
+    Duel_Menu(target, 0, challengerName);
+    CPrintToChatAllEx(client, "{teamcolor}\"%s\" {default}has challenged", challengerName);
+    CPrintToChatAllEx(target, "{teamcolor}\"%s\" {default}to a duel!", challengedName);
 
     return Plugin_Continue;
 }
