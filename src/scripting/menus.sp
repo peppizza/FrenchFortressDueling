@@ -5,8 +5,11 @@ public int DuelMenuHandler(Menu menu, MenuAction action, int param1, int param2)
         PrintToConsole(param1, "You selected item: %d", param2);
         if (param2 == 1)
         {
-            challenger.duel = true;
-            challenged.duel = true;
+            Player challenger = new Player(challengerId);
+            Player challenged = new Player(challengedId);
+
+            challenger.dueling = true;
+            challenged.dueling = true;
         }
     }
 }

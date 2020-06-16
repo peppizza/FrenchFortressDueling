@@ -8,7 +8,7 @@
 
 #pragma newdecls required
 
-#include "variables.sp"
+#include "header.sp"
 #include <sourcemod>
 #include <sdkhooks>
 #include <tf2_stocks>

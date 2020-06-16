@@ -31,20 +31,9 @@ methodmap Player __nullable__
         {
             return IsPlayerAlive(this.client);
         }
-        public set(bool value)
-        {
-            if (value)
-            {
-                TF2_RespawnPlayer(this.client);
-            }
-            else
-            {
-                ForcePlayerSuicide(this.client);
-            }
-        }
     }
 
-    property bool duel
+    property bool dueling
     {
         public get()
         {
@@ -56,15 +45,13 @@ methodmap Player __nullable__
         }
     }
 
-    property TFTeam team
+    public void KillPlayer()
     {
-        public get()
-        {
-            return TF2_GetClientTeam(this.client);
-        }
-        public set(TFTeam team)
-        {
-            TF2_ChangeClientTeam(this.client, team);
-        }
+        ForcePlayerSuicide(this.client);
+    }
+
+    public void RespawnPlayer()
+    {
+        TF2_RespawnPlayer(this.client);
     }
 }

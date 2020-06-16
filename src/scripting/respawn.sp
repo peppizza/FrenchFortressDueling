@@ -80,7 +80,7 @@ public Action Command_RespawnPlayer(int client, int args)
         PrintToConsole(client, "User: \"%s\" is already alive", name);
         return Plugin_Handled;
     }
-    player.alive = true;
+    player.RespawnPlayer();
     return Plugin_Handled;
 }
 
@@ -117,6 +117,6 @@ public Action Command_KillPlayer(int client, int args)
         return Plugin_Handled;
     }
     Player player = new Player(client);
-    player.alive = false;
+    player.KillPlayer();
     return Plugin_Handled;
 }

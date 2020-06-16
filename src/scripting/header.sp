@@ -1,6 +1,6 @@
 // booleans
 bool isDueling[MAXPLAYERS+1] = false;
 
-// players
-Player challenger;
-Player challenged;
+// integers
+int challengerId;
+int challengedId;
